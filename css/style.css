@@ -1,7 +1,52 @@
 h1{
 font-size: 50px;
 text-align: center;
-color: black;
+color: white;
 margin: 0;
-font: italic small-caps bold 16px/2 cursive;
+font: italic small-caps bold 100px/2 cursive;
+}
+body{
+    margin: auto; 
+    padding: 1em;
+}
+.top-menu li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-block: 0;
+}
+.top-menu a:hover {
+    background-color: #ddd;
+    color: rgb(238, 134, 65);
+  }
+
+  .main-header{
+    text-align: center;
+    padding: 20px;
+  }
+
+nav{
+    background-color: burlywood;
+    padding: 0.3em;
+    }
+    nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    }
+.top-menu{
+    display: inline-block;
+    margin-right: 20px;
+    margin-block: 0;
+}
+.top-menu a{
+    text-decoration: none;
+    color: rgb(189, 12, 12);
+    font-weight: bold;
+}
+
+footer{
+    background-color: rgb(148, 86, 15);
+    color: aliceblue;
+    padding: 1em;
+text-align: center;
 }
