@@ -9,33 +9,36 @@
     This stylesheet contains the styling rules that will be applied to the HTML elements. -->
     <style>
         body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image:url(img/taustaBurgeri.webp);
             display: flex;
             flex-direction: column;
         }
         nav{
-            flex:1;
             display: flex;
             justify-content: space-evenly;
-        }
-        div{
-            flex-direction: column;
-            display: flex;
-            
         }
         footer{
             display: flex;
             justify-content: center;
         }
-        section{
-            flex:2;
+        main {
+      display: flex;
+      flex-direction: column;
+        }
+        article {
+    
+        background: black;
+      border: 1px solid #ffffff;
+      padding: 10px;
+      margin: 5px;
         }
     </style>
 
     <title>Burgeri, Hämeenlinna</title>
 </head>
 <body>
-    <div style="background-image:url(img/taustaBurgeri.webp); max-width: 1500px;max-height: 2250px;">
-    <nav>
+    <div><nav>
         <!-- Your page can have multiple menus, we are going to use the following items as top menu bar so let's define
              a class to this ul item and add css later
              that is class="top-menu" -->
@@ -46,41 +49,21 @@
             <li><a href="Conctact.html" target="_blank">Contact</a></li>
         </ul>
     </nav>
-    <header>
-        <h1 style="color: ghostwhite; text-align: center;">Ravintola  Burgerit</h1>
-        
-    </header>
-    
-    <section ><img src="img/img1.jpg" alt="Burger" title="Burger" style="float:right;height:250px;">
-        
-        
-        <h2>Burger Of The Month</h2>
-        <h2>Special Cheese Burger</h2>
-        <p class="BOM" style="color: white; background-color: rgb(145, 95, 37);"><img src="https://images.pexels.com/photos/16353202/pexels-photo-16353202/free-photo-of-close-up-of-a-burger-with-bacon.jpeg?auto=compress&cs=tinysrgb&w=600"></p>
-    </section>
-
-    <section >
-        <h2>text</h2>
-        
-        <div >
-            <p></p>
-        </div>
-    </section>
-
-    <section >
-        <h2>Changing Font</h2>
-        <!-- We want to use custom font with some styles
-             let's use class that is class="custom-font"" and update
-             the css file. -->
-        <p>This text uses a custom font.</p>
-    </section>
-
-
-
-
-
-
+    </div>
+    <div>
+        <header>
+            <h1 style="color: ghostwhite; text-align: center;">Ravintola  Burgerit</h1>         
+        </header>
+    </div>
+    <main>
+    <div>
+        <article><h2>Burger Of The Month</h2></article><br>
+        <article><h1>Item 2</h1></article><br>
+        <article><h1>Item 3</h1></article><br>
+    </div>
 </div>
+</main>
+
 <footer>
     <p> Privacy statement | &copy; Copyright Ryhmä 12 RAVINTOLA. All rights to changes are reserved.</p>
 </footer>
