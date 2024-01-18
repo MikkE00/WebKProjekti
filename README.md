@@ -9,9 +9,13 @@ Figma
 
 ### Mikael Elizarov
 -Clickable header buttons
+-Navbar added -highlight on mouse hover -
+-Header logo
+-"Burger Bros" text image using figma
 
 
-
+### Markus Heikkinen
+- About us page
 
 
 #### Copyright Free images used:
