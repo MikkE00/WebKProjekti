@@ -12,7 +12,8 @@ Figma
 -Navbar added -highlight on mouse hover -
 -Header logo
 -"Burger Bros" text image using figma
-
+-Index page
+-Contact page
 
 ### Markus Heikkinen
 - About us page
