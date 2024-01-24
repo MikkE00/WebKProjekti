@@ -2,66 +2,24 @@
 <html lang="en">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burgeriravintolan Menu</title>
+
+
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: gray;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        section {
-            display: flex;    
-            flex-direction: row; 
-            justify-content: center; 
-            max-width: 600px;
-            margin: 40px auto;
-        }
-
-        .menu-item {
-            flex: 0 0 30%; 
-            display: flex;
-            flex-direction: column; 
-            align-items: center;
-            padding: 10px;
-            margin-bottom: 10px;
-            margin-right: 35px;
-            border-radius: 40px;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .menu-item img {
-            width: 200px; 
-            height: auto;
-            padding: 7px;
-            background-color: black;
-            border-radius: 40px;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .menu-item-text {
-            padding: 10px;
-            text-align: center; 
-        }
-
-        .menu-item:hover {
-            background-color: bisque;
-        }
+      body {
+        background-image: url('img/taustaBurgeri.webp');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        backdrop-filter: blur(10px);
+      }
     </style>
+
 </head>
 <body>
-
-
     <main>
         <div>
           <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
@@ -73,7 +31,7 @@
                 <div class="collapse navbar-collapse show" id="navbarDark">
                   <ul class="navbar-nav me-auto mb-2 mb-xl-0">
                     <li class="nav-item navbarH">
-                      <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item navbarH">
                       <a class="nav-link active " aria-current="page" href="Aboutus.html" >About us</a>
@@ -89,40 +47,160 @@
               </div>
             </nav>
       </div>
-      </main>
-    <header>
-        <h1>Burgeriravintolan Menu</h1>
-    </header>
-    <section>
-        <div class="menu-item">
-            <img src="img/burger6.jpeg" alt="Hampurilainen 1">
-            <div class="menu-item-text">
-              
-                <h2>Hampurilainen Deluxe</h2>
-                <p>Maukas hampurilainen sisältäen naudanlihaa, salaattia, tomaattia, juustoa ja majoneesia.</p>
-                <p>Hinta: 8,50 €</p>
-            </div>
-        </div>
 
-        <div class="menu-item">
-            <img src="img/burger5.jpeg" alt="Hampurilainen 2">
-            <div class="menu-item-text">
-                <h2>Kasvisburger</h2>
-                <p>Herkullinen kasvisvaihtoehto, jossa on vihanneksia, vegaanijuustoa ja erikoiskastiketta.</p>
-                <p>Hinta: 7,50 €</p>
-            </div>
-        </div>
 
-        <div class="menu-item">
-            <img src="img/burger4.jpeg" alt="Hampurilainen 3">
-            <div class="menu-item-text">
-                <h2>Bacon Ranch Burger</h2>
-                <p>Sisältää pekonia, cheddarjuustoa, salaattia ja ranch-kastiketta.</p>
-                <p>Hinta: 9,00 €</p>
+      <class="container">
+        <div class="menu">
+          <h2 class="menu-group-heading">Hamburgers</h2>
+          <div class="menu-group">
+            <div class="menu-item">
+              <img
+                src="img/burger4.jpeg"
+                alt="Cheeseburger"
+                class="menu-item-img"
+              />
+              <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                  <span class="menu-item-name">Cheeseburger</span>
+                  <span class="menu-item-price">$10.90</span>
+                </h3>
+                <p class="menu-item-desc">
+                  A 100% beef cheeseburger with cheddar cheese, red onion and Burgerbros sauce
+                </p>
+              </div>
             </div>
+            <div class="menu-item">
+              <img
+                src="img/burger5.jpeg"
+                alt="double cheeseburger"
+                class="menu-item-img"
+              />
+              <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                  <span class="menu-item-name">Double cheeseburger</span>
+                  <span class="menu-item-price">$12.90</span>
+                </h3>
+                <p class="menu-item-desc">
+                  A double cheeseburger with 100% beef, cheddar cheese, red onion, lettuce, tomato and Burgerbros sauce
+                </p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="img/burger6.jpeg"
+                alt="Vegan-burger"
+                class="menu-item-img"
+              />
+              <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                  <span class="menu-item-name">Vegan burger</span>
+                  <span class="menu-item-price">$10.90</span>
+                </h3>
+                <p class="menu-item-desc">
+                  100% vegan burger with vegan cheese, burger patty, onions and lettuce and Burgerbros sauce
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+        <div class="menu">
+          <h2 class="menu-group-heading">Sides</h2>
+          <div class="menu-group">
+            <div class="menu-item">
+              <img
+                src="img/Frenchfries.jpg"
+                alt="French-fries"
+                class="menu-item-img"
+              />
+              <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                  <span class="menu-item-name">French fries</span>
+                  <span class="menu-item-price">$3.90</span>
+                </h3>
+                <p class="menu-item-desc">
+                  French fries + dip sauce
+                </p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="img/sweetpotatofries.jpg"
+                alt="Sweetpotato-fries"
+                class="menu-item-img"
+              />
+              <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                  <span class="menu-item-name">Sweet potato fries</span>
+                  <span class="menu-item-price">$3.90</span>
+                </h3>
+                <p class="menu-item-desc">
+                  Sweet potato fries + dip sauce
+                </p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="img/onionrings.jpg"
+                alt="Onion-rings"
+                class="menu-item-img"
+              />
+              <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                  <span class="menu-item-name">Onion rings</span>
+                  <span class="menu-item-price">$3.90</span>
+                </h3>
+                <p class="menu-item-desc">
+                  8 onion rings + dip sauce
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu">
+          <h2 class="menu-group-heading">Drinks</h2>
+          <div class="menu-group">
+            <div class="menu-item">
+              <img
+                src="img/pepsi.jpg"
+                alt="Pepsi-max"
+                class="menu-item-img"
+              />
+              <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                  <span class="menu-item-name">Fountain drink</span>
+                  <span class="menu-item-price">$2.49</span>
+                </h3>
+                <p class="menu-item-desc">
+                  Pepsi Max / Fanta / Sprite
+                </p>
+              </div>
+            </div>
+            <div class="menu-item">
+              <img
+                src="img/milkshakes.jpg"
+                alt="milkshake"
+                class="menu-item-img"
+              />
+              <div class="menu-item-text">
+                <h3 class="menu-item-heading">
+                  <span class="menu-item-name">Milkshake</span>
+                  <span class="menu-item-price">$3.90</span>
+                </h3>
+                <p class="menu-item-desc">
+                  Chocolate / Vanilla / Strawberry
+                </p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <p>All items can be made gluten-free!</p>
+        </div>
+        <footer><!--Footer-->
+          <p> Privacy statement | &copy; Copyright Ryhmä 12 Burgerbros. All rights to changes are reserved.</p>
+      </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </main>
 </body>
 </html>
