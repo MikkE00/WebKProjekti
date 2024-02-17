@@ -7,31 +7,31 @@ include ("header.html");
 if (isset($_POST["tuote"])){
     $tuote=$_POST["tuote"];
     }
-else {
-    header("Location:menuLomake.html");
-    exit;
-    }  
+
 
 if (isset($_POST["kuvaus"])){
     $kuvaus=$_POST["kuvaus"];
     }   
-else {
-    $kuvaus="";
-    }
+
 
 if (isset($_POST["hinta"])){
     $hinta=$_POST["hinta"];
     }
-else {
-    $hinta="";
-    }
+
 
 if (isset($_POST["ryhma"])){
     $ryhma=$_POST["ryhma"];
     }
-else {
-    $ryhma="";
+
+if (isset($_POST["id"])){
+    $id=$_POST["id"];
     }
+
+if (! (isset($tuote) || isset($kuvaus) || isset($hinta) || isset($ryhma) || isset($id))){
+    header("Location: poista.php");
+    exit;
+}
+
 
 // $yhteys = mysqli_connect("127.0.0.1", "pena", "kukkuu", "hamklomakeesimerkki");
     $yhteys = mysqli_connect("127.0.0.1", "admin", "admin");
