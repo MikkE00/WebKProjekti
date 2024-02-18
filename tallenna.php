@@ -34,7 +34,7 @@ else {
     }
 
 // $yhteys = mysqli_connect("127.0.0.1", "pena", "kukkuu", "hamklomakeesimerkki");
-    $yhteys = mysqli_connect("localhost", "root", "password", "burgerbros");
+    $yhteys = mysqli_connect("127.0.0.1", "root", "password", "burgerbros");
 
 // Check connection
 if (!$yhteys) {

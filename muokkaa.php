@@ -1,6 +1,7 @@
 <?php
 include("header.html");
-
+?>
+<?php
 if (isset($_GET["muokattava"])) {
     $muokattava = $_GET["muokattava"];
 } else {

@@ -16,7 +16,7 @@ if (!$yhteys) {
 }
 echo "Yhteys OK."; // debuggia
 
-$tietokanta = mysqli_select_db($yhteys, "menu");
+$tietokanta = mysqli_select_db($yhteys, "burgerbros");
 if (!$tietokanta) {
     die("Tietokannan valinta epäonnistui: " . mysqli_connect_error());
 }
@@ -35,7 +35,7 @@ $tulos = mysqli_query($yhteys, "SELECT * FROM menu");
 
 print "<ol>";
 while ($rivi = mysqli_fetch_object($tulos)){
-    print "<li>id=$rivi->id tuote=$rivi->tuote kuvaus=$rivi->kuvaus hinta=$rivi->hinta  <a href='poista.php?poistettava=".$rivi->id."'>Poista</a><br>";
+    print "<li>id=$rivi->id tuote=$rivi->tuote kuvaus=$rivi->kuvaus hinta=$rivi->hinta ryhma=$rivi->ryhma  <a href='poista.php?poistettava=".$rivi->id."'>Poista</a> <a href='muokkaa.php?muokattava=".$rivi->id."'>Muokkaa</a><br>";
 }
 print "</ol>";
 mysqli_close($yhteys); 
