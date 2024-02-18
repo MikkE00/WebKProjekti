@@ -34,7 +34,7 @@ else {
     }
 
 // $yhteys = mysqli_connect("127.0.0.1", "pena", "kukkuu", "hamklomakeesimerkki");
-    $yhteys = mysqli_connect("127.0.0.1", "root", "password", "burgerbros");
+    $yhteys = mysqli_connect("localhost", "root", "password", "burgerbros");
 
 // Check connection
 if (!$yhteys) {
@@ -55,7 +55,7 @@ mysqli_stmt_execute($stmt);
 
 mysqli_stmt_close($stmt);
 mysqli_close($yhteys); 	
-header("Location:menuLomake.html");
+//header("Location:menuLomake.html");
 exit;
 
 ?>

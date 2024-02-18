@@ -8,7 +8,7 @@ if (isset($_GET["poistettava"])){
     $poistettava=$_GET["poistettava"];
 }
 
-$yhteys = mysqli_connect("127.0.0.1", "admin", "admin", "burgerbros");
+$yhteys = mysqli_connect("127.0.0.1", "root", "password", "burgerbros");
 
 // Check connection
 if (!$yhteys) {

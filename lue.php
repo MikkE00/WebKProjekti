@@ -4,7 +4,7 @@ include "header.html";
 
 <?php
 // $yhteys = mysqli_connect("127.0.0.1", "pena", "kukkuu", "hamklomakeesimerkki");
-$yhteys = mysqli_connect("127.0.0.1", "admin", "admin");
+$yhteys = mysqli_connect("127.0.0.1", "root", "password");
 
 // Check connection
 if (!$yhteys) {
@@ -22,7 +22,7 @@ $tulos=mysqli_query($yhteys, "select * from menu");
 
 print "<ol>"
 while ($rivi=mysqli_fetch_object($tulos)){
-    print "<li>id=$rivi->id tuote=$rivi->tuote kuvaus=$rivi->kuvaus hinta=$rivi->hinta<br>";
+    print "<li>id=$rivi->id tuote=$rivi->tuote kuvaus=$rivi->kuvaus ryhma=$rivi->ryhma hinta=$rivi->hinta<br>";
 }
 print "/<ol>";
 mysqli_close($yhteys); 
