@@ -1,25 +1,28 @@
 <?php 
-if (isset($_POST["tunnus"]) && (isset($_POST["salasana"]) && 
-(isset($_POST["etunimi"]) && (isset($_POST["sukunimi"]))))){
+// Otetaan lomakkeelta saadut tiedot ja sijoitetaan ne muuttujiin
+if (isset($_POST["tunnus"]) && isset($_POST["salasana"]) && isset($_POST["etunimi"]) && isset($_POST["sukunimi"])){
     $tunnus=$_POST["tunnus"];
-    $tunnus=$_POST["salasana"];
-    $tunnus=$_POST["etunimi"];
-    $tunnus=$_POST["sukunimi"];
+    $salasana=$_POST["salasana"];
+    $etunimi=$_POST["etunimi"];
+    $sukunimi=$_POST["sukunimi"];
 }
 else {
+    // Jos jotkin tiedot puuttuvat, ohjataan takaisin rekisteröitymissivulle
     header("Location:rekisteroityminen.html");
     exit;
 }
 
+// Luodaan yhteys tietokantaan
 $yhteys = mysqli_connect("127.0.0.1", "root", "password", "burgerbros");
 $tietokanta = mysqli_select_db($yhteys, "burgerbros");
-$sql="insert into burgerbros values(?, ?, ?, ?";
+
+// Valmistellaan SQL-lauseke ja suoritetaan lisäys
+$sql="INSERT INTO burgerbros (tunnus, salasana, etunimi, sukunimi) VALUES (?, ?, ?, ?)";
 $stmt=mysqli_prepare($yhteys, $sql);
 mysqli_stmt_bind_param($stmt, "ssss", $tunnus, md5($salasana), $etunimi, $sukunimi);
 mysqli_stmt_execute($stmt);
 
-//voi lisätä kiitos rekisteröinnistä sivun
+// Ohjataan kiitos-sivulle (voi ottaa käyttöön myöhemmin)
 //header("Location:kiitos.html");
 exit;
-
 ?>
